@@ -1,0 +1,66 @@
+# Site Info
+title: BitBox 
+tagline: 'BitBox: A travel and tech site'
+description: 'BitBox: A travel and tech site'
+baseurl: 
+url: http://bitbox.ca
+logo: '/public/logo.png'
+
+twitter_format: "@title: @tags"
+twitter_url_length: 22
+twitter_max_length: 140
+
+# Site configurations
+gems:
+  - jekyll-paginate
+markdown: kramdown
+kramdown:
+  input: GFM
+excerpt_separator: "<!-- more -->"
+sass:
+  style: compressed
+  sass_dir: _scss    
+paginate: 5
+paginate_path: '/blog/page:num'
+permalink: pretty
+
+version: 1.0.0
+
+# About/contact
+author:
+  name: David Kerins
+  description: A <strong>developer and researcher</strong>.
+  gravatar: f7cab18f335721c6b9ba59b0ae6fb98f # md5 hash of your email address
+  contact:
+    linkedin:  https://www.linkedin.com/in/ddkerins
+    github:    https://github.com/david-kerins
+    twitter:   https://twitter.com/david_kerins
+
+# Navigation (2nd level links supported)
+nav:
+  Home:           
+    - '/'
+  Blog:           
+    - '/blog/'
+    - { Categories: '/blog/categories/' }
+    - { Tags: '/blog/tags/' }
+  About:          
+    - '/about/'
+
+# Where are tags and categories displayed
+tag_page: '/blog/tags/'
+category_page: '/blog/categories/'
+
+hero:
+  image: /public/img/waves.png
+
+# Puglins
+mathjax: true # whether support mathjax
+google_analytics_token: '' # leave blank if you don't want google analytics
+disqus_short_name: '' # leave blank if you don't want disqus
+
+# Deployment
+source: /home/dkerins/jekyll-bitbox
+destination: /var/www/bitbox.ca/_site
+host: 192.168.100.1 
+port: 4000
